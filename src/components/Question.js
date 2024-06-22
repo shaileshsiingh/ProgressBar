@@ -16,14 +16,14 @@ const Question = ({ question, currentQuestion, totalQuestions, handleNext, handl
       <div className="question-text">{question}</div>
       <div className="options">
         {labels.map((label, index) => (
-          <label key={index}>
+          <label key={index} className="option-label">
             <input type="radio" name="answer" value={index + 1} /> {label}
           </label>
         ))}
       </div>
       <div className="navigation-buttons">
         <button className="prev" onClick={handlePrev} disabled={currentQuestion === 0}>Prev</button>
-        <button className="next" onClick={handleNext} disabled={currentQuestion === totalQuestions - 1}>Next</button>
+        <button className="next" onClick={handleNext}>Next</button>
       </div>
     </div>
   );

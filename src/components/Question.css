@@ -1,5 +1,6 @@
 .question-container {
     text-align: left;
+    transition: transform 0.5s ease-in-out;
   }
   
   .question-header {
@@ -26,12 +27,12 @@
     margin-bottom: 20px;
   }
   
-  .options label {
+  .option-label {
     display: flex;
     align-items: center;
   }
   
-  .options input {
+  .option-label input {
     margin-right: 10px;
   }
   
