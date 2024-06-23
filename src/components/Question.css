@@ -22,12 +22,12 @@
 .question-number {
   font-size: 28px;
   color: #e74c3c;
-  margin: 25px;
+  margin-bottom: 20px;
 }
 
 .question-text {
   font-size: 28px;
-  margin: 80px;
+  margin-bottom: 40px;
   width: 100%;
 }
 
