@@ -9,7 +9,7 @@
 
 .header {
   width: 100%;
-  background-color: #914242;
+  background-color: #428891;
   color: white;
   padding: 20px 0;
 }
@@ -17,5 +17,5 @@
 .header-title {
   font-size: 26px;
   margin: 0;
-  color: brown;
+  color: rgb(42, 157, 165);
 }
