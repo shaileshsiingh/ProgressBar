@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Question from './Question';
+import { motion } from 'framer-motion';
 import './Quiz.css';
 
 const Quiz = () => {
@@ -41,20 +42,29 @@ const Quiz = () => {
 
   return (
     <div className="quiz-container">
-      <div className="progress-bar">
-        <div className="progress-indicator" style={{ width: `${progressPercentage}%` }}></div>
+      <div className="header">
+        <h1 className="header-title">ARE YOU DISILLUSIONED?</h1>
       </div>
-      {isCompleted ? (
-        <div className="completion-message">Completed!</div>
-      ) : (
-        <Question
-          question={questions[currentQuestion]}
-          currentQuestion={currentQuestion}
-          totalQuestions={questions.length}
-          handleNext={handleNext}
-          handlePrev={handlePrev}
-        />
-      )}
+      <div className="progress-bar">
+        <motion.div
+          className="progress-indicator"
+          initial={{ width: 0 }}
+          animate={{ width: `${progressPercentage}%` }}
+        ></motion.div>
+      </div>
+      <div className="question-wrapper">
+        {isCompleted ? (
+          <div className="completion-message">Completed!</div>
+        ) : (
+          <Question
+            question={questions[currentQuestion]}
+            currentQuestion={currentQuestion}
+            totalQuestions={questions.length}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
+          />
+        )}
+      </div>
     </div>
   );
 };
