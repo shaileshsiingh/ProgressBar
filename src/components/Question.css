@@ -17,6 +17,23 @@
   color: #3498db;
   width: 100%;
   font-size: 24px;
+  position: relative;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  position: relative;
+}
+
+.category-slider-container {
+  width: 100%;
+  height: 5px;
+  background-color: lightgrey;
+  position: absolute;
+  top: -10px; /* Adjust this to position above the category text */
 }
 
 .question-number {

@@ -28,7 +28,6 @@ const Quiz = () => {
     }
   };
 
-  const progressPercentage = (currentQuestion + 1) / questions.length * 100;
 
   useEffect(() => {
     if (isCompleted) {
@@ -43,13 +42,7 @@ const Quiz = () => {
   return (
     <div className="quiz-container">
      
-      <div className="progress-bar">
-        <motion.div
-          className="progress-indicator"
-          initial={{ width: 0 }}
-          animate={{ width: `${progressPercentage}%` }}
-        ></motion.div>
-      </div>
+    
       <div className="question-wrapper">
         {isCompleted ? (
           <div className="completion-message">Completed!</div>

@@ -4,6 +4,7 @@ import './Question.css';
 
 const Question = ({ question, currentQuestion, totalQuestions, handleNext, handlePrev }) => {
   const labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
+  const categories = ["Idealistic", "Disillusioned", "Cynical", "Hopeful"];
   const [selectedOption, setSelectedOption] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -17,13 +18,27 @@ const Question = ({ question, currentQuestion, totalQuestions, handleNext, handl
     }, 1000); // Time for the slider animation before moving to the next question
   };
 
+
   return (
     <div className="question-container">
       <div className="question-header">
-        <span>IDEALISTIC</span>
-        <span>DISILLUSIONED</span>
-        <span>CYNICAL</span>
-        <span>HOPEFUL</span>
+        {categories.map((category, index) => (
+          <div key={index} className="category-container">
+            <span>{category}</span>
+            <div className="category-slider-container">
+              <motion.div
+                className="fill-slider"
+                initial={{ width: 0 }}
+                animate={{
+                  width: currentQuestion >= index ? '100%' : 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                }}
+              />
+            </div>
+          </div>
+        ))}
       </div>
       <div className="question-number">{currentQuestion + 1}/{totalQuestions}</div>
       <div className="question-text">{question}</div>
