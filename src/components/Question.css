@@ -20,13 +20,13 @@
 }
 
 .question-number {
-  font-size: 28px;
+  font-size: 20px;
   color: #e74c3c;
   margin-bottom: 20px;
 }
 
 .question-text {
-  font-size: 28px;
+  font-size: 22px;
   margin-bottom: 40px;
   width: 100%;
 }
@@ -47,7 +47,6 @@
 .slider-line {
   position: relative;
   width: 100%;
-  background-color: #e0e0e0;
   display: flex;
   align-items: center;
   justify-content: space-between;
