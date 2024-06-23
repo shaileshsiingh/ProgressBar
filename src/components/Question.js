@@ -36,7 +36,11 @@ const Question = ({ question, currentQuestion, totalQuestions, handleNext, handl
               animate={{
                 width: selectedOption !== null ? `${(selectedOption + 1) * 20}%` : 0,
               }}
-              transition={{ duration: 0.5, yoyo: isAnimating ? Infinity : 0 }}
+              transition={{
+                duration: 0.5,
+                repeatType: 'reverse',
+                repeat: isAnimating ? 1 : 0
+              }}
             />
             {labels.map((label, index) => (
               <div key={index} className="option-container" onClick={() => handleOptionSelect(index)}>
