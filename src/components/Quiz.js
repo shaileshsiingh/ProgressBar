@@ -42,9 +42,7 @@ const Quiz = () => {
 
   return (
     <div className="quiz-container">
-      <div className="header">
-        <h1 className="header-title">ARE YOU DISILLUSIONED?</h1>
-      </div>
+     
       <div className="progress-bar">
         <motion.div
           className="progress-indicator"

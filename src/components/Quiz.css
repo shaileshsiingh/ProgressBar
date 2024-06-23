@@ -39,18 +39,5 @@
     align-items: center;
   }
   
-  .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #e74c3c;
-    color: white;
-    padding: 20px 0;
-    z-index: 10;
-  }
-  
-  .header-title {
-    font-size: 36px;
-    margin: 0;
-  }
+
   
