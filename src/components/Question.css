@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 940px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
   margin-bottom: 20px;
   color: #3498db;
   width: 100%;
-  font-size: 24px;
+  font-size: 2vw; /* Responsive font size */
   position: relative;
 }
 
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
+  width: 22%; /* Adjust width for better spacing */
   position: relative;
 }
 
@@ -37,13 +37,13 @@
 }
 
 .question-number {
-  font-size: 20px;
+  font-size: 4vw; /* Responsive font size */
   color: #e74c3c;
   margin-bottom: 20px;
 }
 
 .question-text {
-  font-size: 22px;
+  font-size: 3vw; /* Responsive font size */
   margin-bottom: 40px;
   width: 100%;
 }
@@ -79,18 +79,18 @@
 }
 
 .dot {
-  height: 15px;
-  width: 15px;
+  height: 1.5vw; /* Responsive size */
+  width: 1.5vw; /* Responsive size */
   background-color: grey;
   border-radius: 50%;
   position: absolute;
-  top: -6px; /* Adjust this value to position the dot on the line */
+  top: -0.75vw; /* Adjust this value to position the dot on the line */
   left: 50%;
   transform: translateX(-50%);
 }
 
 .option-label {
-  font-size: 22px;
+  font-size: 2.5vw; /* Responsive font size */
   margin-top: 20px;
 }
 
@@ -117,7 +117,7 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 4vw; /* Responsive font size */
 }
 
 .navigation-buttons .prev:hover,
@@ -129,4 +129,28 @@
 .navigation-buttons .next:disabled {
   background-color: #b0c4de;
   cursor: not-allowed;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  .question-header {
+    font-size: 1.5rem; /* Fixed font size for larger screens */
+  }
+  .question-number {
+    font-size: 1.25rem; /* Fixed font size for larger screens */
+  }
+  .question-text {
+    font-size: 1.5rem; /* Fixed font size for larger screens */
+  }
+  .dot {
+    height: 15px; /* Fixed size for larger screens */
+    width: 15px; /* Fixed size for larger screens */
+  }
+  .option-label {
+    font-size: 1.25rem; /* Fixed font size for larger screens */
+  }
+  .navigation-buttons .prev,
+  .navigation-buttons .next {
+    font-size: 1rem; /* Fixed font size for larger screens */
+  }
 }
