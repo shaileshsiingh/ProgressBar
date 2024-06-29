@@ -84,7 +84,7 @@
   background-color: grey;
   border-radius: 50%;
   position: absolute;
-  top: -0.75vw; /* Adjust this value to position the dot on the line */
+  top: -0.40vw; /* Adjust this value to position the dot on the line */
   left: 50%;
   transform: translateX(-50%);
 }
